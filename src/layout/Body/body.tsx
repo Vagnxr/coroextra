@@ -1,139 +1,128 @@
 import React from "react";
 
-import Logo from "assets/images/logo.svg";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
-import {
-  BsSearch,
-  BsChevronLeft,
-  BsChevronRight,
-  BsStar,
-} from "react-icons/bs";
+import { BsChevronLeft, BsChevronRight, BsStar } from "react-icons/bs";
 
-import {
-  Container,
-  InputSearch,
-  HashTags,
-  Exposure,
-  Company,
-  Cards,
-  Scroll,
-  ButtonLeft,
-  ButtonRight,
-  ItemCard,
-  Title,
-} from "./style";
+import { BodyComponent, Exposure, Company, ItemCard, Title } from "./style";
+
+import Slider from "react-slick";
 
 const Body: React.FC = () => {
+  const settings = {
+    dots: false,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 3,
+    responsive: [
+      {
+        breakpoint: 1080,
+        settings: {
+          slidesToShow: 1,
+        },
+      },
+    ],
+    slidesToScroll: 1,
+    nextArrow: <BsChevronRight size={24} />,
+    prevArrow: <BsChevronLeft size={24} />,
+  };
+
   return (
     <>
-      <Container>
-        <img src={Logo} alt="Coroextra banner" />
-        <h1>
-          Nunca foi tão fácil pedir <strong>lanche</strong>
-        </h1>
-        <h5>Descubra restaurantes e mercados perto de você</h5>
-      </Container>
-      <InputSearch>
-        <form>
-          <BsSearch size={20} />
-          <input placeholder="Buscar" />
-        </form>
-        <button>Buscar</button>
-      </InputSearch>
-      <HashTags>
-        <ul>
-          <li>#mercado</li>
-          <li>#pizza</li>
-          <li>#lanche</li>
-          <li>#comidajaponesa</li>
-          <li>#comidabrasileira</li>
-          <li>#comidaárabe</li>
-          <li>#comidach</li>
-        </ul>
-      </HashTags>
-      <Exposure>
-        <a href="#">
-          <img
-            src="https://static-images.ifood.com.br/image/upload/f_auto,q_100/webapp/landing/landing-banner-1"
-            alt=""
-          />
-        </a>
+      <BodyComponent>
+        <Exposure>
+          <a href="http://localhost:3000">
+            <img
+              src="https://static-images.ifood.com.br/image/upload/f_auto,q_100/webapp/landing/landing-banner-1"
+              alt="Component page"
+            />
+          </a>
 
-        <a href="#">
-          <img
-            src="https://static-images.ifood.com.br/image/upload/f_auto,q_100/webapp/landing/landing-banner-2"
-            alt=""
-          />
-        </a>
+          <a href="http://localhost:3000">
+            <img
+              src="https://static-images.ifood.com.br/image/upload/f_auto,q_100/webapp/landing/landing-banner-2"
+              alt="Component page"
+            />
+          </a>
 
-        <a href="#">
-          <img
-            src="https://static-images.ifood.com.br/image/upload/f_auto,q_100/webapp/landing/landing-banner-3"
-            alt=""
-          />
-        </a>
-      </Exposure>
-      <Company>
-        <Title>The best of coroextra:</Title>
+          <a href="http://localhost:3000">
+            <img
+              src="https://static-images.ifood.com.br/image/upload/f_auto,q_100/webapp/landing/landing-banner-3"
+              alt="Component page"
+            />
+          </a>
+        </Exposure>
+        <Company>
+          <Title>The best of coroextra:</Title>
 
-        <Cards>
-          <ItemCard>
-            <img src="https://static-images.ifood.com.br/image/upload/f_auto,t_thumbnail/logosgde/Logo McDonald_MCDON_DRIV15.jpg" />
+          <Slider {...settings}>
+            <ItemCard>
+              <img
+                alt="Item card"
+                src="https://static-images.ifood.com.br/image/upload/f_auto,t_thumbnail/logosgde/Logo McDonald_MCDON_DRIV15.jpg"
+              />
 
-            <div>
-              <h1>McDonalds</h1>
-              <span>
-                <BsStar size={10} /> <strong>4.6</strong> Frutos do Mar . 5,6km
-              </span>
-              <span>60-70 min</span>
-            </div>
-          </ItemCard>
+              <div>
+                <h1>McDonalds</h1>
+                <span>
+                  <BsStar size={10} /> <strong>4.6</strong> Frutos do Mar .
+                  5,6km
+                </span>
+                <span>60-70 min</span>
+              </div>
+            </ItemCard>
 
-          <ItemCard>
-            <img src="https://static-images.ifood.com.br/image/upload/f_auto,t_thumbnail/logosgde/Logo McDonald_MCDON_DRIV15.jpg" />
+            <ItemCard>
+              <img
+                alt="Item card"
+                src="https://static-images.ifood.com.br/image/upload/f_auto,t_thumbnail/logosgde/Logo McDonald_MCDON_DRIV15.jpg"
+              />
 
-            <div>
-              <h1>McDonalds</h1>
-              <span>
-                <BsStar size={10} /> <strong>4.6</strong> Frutos do Mar . 5,6km
-              </span>
-              <span>60-70 min</span>
-            </div>
-          </ItemCard>
+              <div>
+                <h1>McDonalds</h1>
+                <span>
+                  <BsStar size={10} /> <strong>4.6</strong> Frutos do Mar .
+                  5,6km
+                </span>
+                <span>60-70 min</span>
+              </div>
+            </ItemCard>
 
-          <ItemCard>
-            <img src="https://static-images.ifood.com.br/image/upload/f_auto,t_thumbnail/logosgde/Logo McDonald_MCDON_DRIV15.jpg" />
+            <ItemCard>
+              <img
+                alt="Item card"
+                src="https://static-images.ifood.com.br/image/upload/f_auto,t_thumbnail/logosgde/Logo McDonald_MCDON_DRIV15.jpg"
+              />
 
-            <div>
-              <h1>McDonalds</h1>
-              <span>
-                <BsStar size={10} /> <strong>4.6</strong> Frutos do Mar . 5,6km
-              </span>
-              <span>60-70 min</span>
-            </div>
-          </ItemCard>
+              <div>
+                <h1>McDonalds</h1>
+                <span>
+                  <BsStar size={10} /> <strong>4.6</strong> Frutos do Mar .
+                  5,6km
+                </span>
+                <span>60-70 min</span>
+              </div>
+            </ItemCard>
 
-          <ItemCard>
-            <img src="https://static-images.ifood.com.br/image/upload/f_auto,t_thumbnail/logosgde/Logo McDonald_MCDON_DRIV15.jpg" />
+            <ItemCard>
+              <img
+                alt="Item card"
+                src="https://static-images.ifood.com.br/image/upload/f_auto,t_thumbnail/logosgde/Logo McDonald_MCDON_DRIV15.jpg"
+              />
 
-            <div>
-              <h1>McDonalds</h1>
-              <span>
-                <BsStar size={10} /> <strong>4.6</strong> Frutos do Mar . 5,6km
-              </span>
-              <span>60-70 min</span>
-            </div>
-          </ItemCard>
-        </Cards>
-        <Scroll>
-          <ButtonLeft>
-            <BsChevronLeft size={20} />
-          </ButtonLeft>
-          <ButtonRight>
-            <BsChevronRight size={20} />
-          </ButtonRight>
-        </Scroll>
-      </Company>
+              <div>
+                <h1>McDonalds</h1>
+                <span>
+                  <BsStar size={10} /> <strong>4.6</strong> Frutos do Mar .
+                  5,6km
+                </span>
+                <span>60-70 min</span>
+              </div>
+            </ItemCard>
+          </Slider>
+        </Company>
+      </BodyComponent>
     </>
   );
 };

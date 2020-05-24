@@ -1,15 +1,15 @@
 import React from "react";
 
-import { Container } from "./style";
-
 import Header from "layout/Header";
 import Body from "layout/Body";
+import Footer from "layout/Footer";
 
 const Home: React.FC = () => {
   return (
     <>
       <Header />
       <Body />
+      <Footer />
     </>
   );
 };

@@ -1,127 +1,10 @@
 import styled from "styled-components";
 
-export const Container = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  max-width: 100%;
-  color: #3e3e3e;
-
-  h1 {
-    font-size: 3rem;
-
-    @media (max-width: 730px) {
-      font-size: 2.4rem;
-      text-align: center;
-    }
-  }
-
-  h5 {
-    font-size: 1.3rem;
-    margin-top: 10px;
-
-    @media (max-width: 730px) {
-      text-align: center;
-    }
-  }
-
-  img {
-    display: block;
-    background-repeat: no-repeat;
-    background-position: center;
-    height: 175px;
-  }
-
-  strong {
-    color: red;
-  }
+export const BodyComponent = styled.div`
+  background-color: #fff;
 `;
 
 export const Grid = styled.div``;
-
-export const InputSearch = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-
-  button {
-    margin: 40px 0 0 20px;
-    width: 140px;
-    height: 50px;
-    background: red;
-    border-radius: 2px;
-    border: 0;
-    color: #fff;
-    font-weight: bold;
-    transition: background-color 0.2s;
-
-    &:hover {
-      background-color: #ff092b;
-    }
-  }
-
-  form {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 40px;
-    background-color: #fff;
-    width: 50%;
-
-    svg {
-      color: red;
-      margin-left: 10px;
-    }
-
-    input {
-      flex: 1;
-      height: 50px;
-      background: transparent;
-      border: none;
-      padding: 0 24px;
-
-      &::placeholder {
-        color: #a6a6a6;
-      }
-    }
-
-    @media (max-width: 730px) {
-      flex: 1;
-    }
-  }
-`;
-
-export const HashTags = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  overflow-x: auto;
-
-  &::-webkit-scrollbar {
-    display: none;
-  }
-
-  ul {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    margin-top: 40px;
-    width: 65%;
-    list-style: none;
-
-    li {
-      cursor: pointer;
-      font-size: 14px;
-      color: #717171;
-      padding: 6px;
-      border: 1px solid #dcdcdc;
-      border-radius: 5px;
-    }
-  }
-`;
 
 export const Exposure = styled.div`
   display: flex;
@@ -159,14 +42,21 @@ export const Exposure = styled.div`
 `;
 
 export const Company = styled.div`
-  display: flex;
-  align-items: flex-start;
-  flex-direction: column;
-  position: relative;
-  justify-content: center;
-  padding: 0 30px;
-  margin-top: 40px;
-  width: 100%;
+  .slick-slider {
+    width: 98% !important;
+
+    svg {
+      color: #000;
+    }
+
+    .slick-prev {
+      margin-left: 40px;
+    }
+
+    .slick-next {
+      margin-right: 20px;
+    }
+  }
 `;
 
 export const Title = styled.div`
@@ -182,55 +72,34 @@ export const Cards = styled.div`
   overflow-x: auto;
   transition: all ease 0.3s;
 
+  @media (max-width: 1140px) {
+    flex-direction: column;
+    overflow: unset;
+  }
+
   &::-webkit-scrollbar {
     display: none;
   }
 `;
 
-export const Scroll = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-`;
-
-export const ButtonLeft = styled.button`
-  left: 14px;
-  top: 60%;
-  position: absolute;
-  background: white;
-  border: 1px solid #c4c4c4;
-  border-radius: 100%;
-  z-index: 1;
-  width: 39px;
-  height: 39px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-`;
-
-export const ButtonRight = styled.button`
-  right: 10px;
-  top: 60%;
-  position: absolute;
-  background: white;
-  border: 1px solid #c4c4c4;
-  border-radius: 100%;
-  z-index: 1;
-  width: 39px;
-  height: 39px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-`;
-
 export const ItemCard = styled.div`
-  display: flex;
+  display: flex !important;
   align-items: center;
-  min-width: 32%;
   border: 1px solid #dcdcdc;
   padding: 20px;
-  margin-left: 15px;
+  margin: 0 15px;
   color: #717171;
+  transition: all ease 0.1s;
+  border-radius: 2px;
+  cursor: pointer;
+
+  &:hover {
+    border-color: #717171;
+  }
+
+  @media (max-width: 1140px) {
+    min-width: 100%;
+  }
 
   div {
     display: flex;

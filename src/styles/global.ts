@@ -14,7 +14,6 @@ ${fonts("Nunito", "woff2")};
 
 body {
     -webkit-font-smoothing: antialiased;
-    background-color: #f5f3f4;
 }
 
 body, input, button {
@@ -24,7 +23,6 @@ body, input, button {
 #root {
     max-width: 100%;
     margin: 0 auto;
-    padding: 20px 20px;
 }
 
 button {
