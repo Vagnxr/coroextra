@@ -1,11 +1,17 @@
 import React from "react";
-import { IHome } from "./type";
 
 import { Container } from "./style";
-export const Home = (props: IHome) => {
+
+import Header from "layout/Header";
+import Body from "layout/Body";
+
+const Home: React.FC = () => {
   return (
-    <Container>
-      <h1>Hello Word!</h1>
-    </Container>
+    <>
+      <Header />
+      <Body />
+    </>
   );
 };
+
+export default Home;
