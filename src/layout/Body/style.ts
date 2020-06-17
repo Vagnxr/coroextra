@@ -89,7 +89,7 @@ export const ItemCard = styled.div`
   padding: 20px;
   margin: 0 15px;
   color: #717171;
-  transition: all ease 0.1s;
+  transition: all ease 0.2s;
   border-radius: 2px;
   cursor: pointer;
 
